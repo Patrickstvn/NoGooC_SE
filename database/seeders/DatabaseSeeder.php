@@ -2,8 +2,8 @@
 
 namespace Database\Seeders;
 
+use App\Models\Category;
 use App\Models\User;
-// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -13,11 +13,15 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // User::factory(10)->create();
-
-        User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
-        ]);
+        if (!User::where('email', 'admin@Nogooc.com')->exists()) {
+            User::factory()->unverified()->create([
+                'name' => 'Admin Nogooc',
+                'email' => 'admin@Nogooc.com',
+                'password' => 'admin-Nogooc123',
+                'is_admin' => true
+            ]);
+        }
+        $this->call(NoteSeeder::class);
+        $this->call(CommentSeeder::class);
     }
 }
