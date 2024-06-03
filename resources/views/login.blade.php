@@ -40,13 +40,17 @@
         <h2 class="h2Form">Masuk dengan email anda</h2>
         <p class="pFormInactive font-light">Masukkan email dan kata sandi yang telah terdaftar.</p>
 
-        <x-forms.input classname="w-full" label="Email" placeholder="Nama@gmail.com" name="email" type="text"
-            value="" />
+        <x-forms.input classname="w-full" label="Email" placeholder="Nama@mail.com" name="email" type="text"
+            value="" required />
 
-        <x-forms.input label="Kata Sandi" classname="w-full" placeholder="Masukkan kata sandi" name="password"
-            type="password" value="" />
+        <x-forms.input label="Password" classname="w-full" placeholder="Masukkan kata sandi" name="password" type="password"
+            value="" required />
 
-        <x-button message="Masuk" type="submit" color="Primary" link="" classname="w-full my-2 py-[10px] text-base"
-            icons="" />
+        <x-button message="Sign in" type="submit" color="Primary" link=""
+            classname="w-full my-2 py-[10px] text-base" icons="" />
+
+        <a class="absolute bottom-4 right-4 text-black font-bold py-2 px-4 rounded-md text-sm underline" href="/register">
+            Register
+        </a>
     </form>
 @endsection

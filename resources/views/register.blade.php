@@ -54,5 +54,9 @@
 
         <x-button message="Daftar" type="submit" color="Primary" link="" type="submit"
             classname="w-full my-2 py-[10px] text-base" icons="" />
+
+        <a class="absolute bottom-4 right-4 text-black font-bold py-0 px-4 rounded-md text-sm underline" href="/login">
+            Sudah memiliki akun? LogIn
+        </a>
     </form>
 @endsection

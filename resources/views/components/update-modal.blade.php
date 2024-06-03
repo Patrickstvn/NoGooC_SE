@@ -8,7 +8,7 @@
             <!-- Modal header -->
             <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
                 <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
-                    Update Notes
+                    Edit Notes
                 </h3>
                 <button type="button"
                     class="end-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
@@ -29,7 +29,7 @@
                     <div>
                         <label for="title-{{ $id }}"
                             class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                            Judul</label>
+                            Title</label>
                         <input type="text" name="title" id="title-{{ $id }}"
                             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-slate-500 focus:border-slate-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
                             placeholder="Judul Note" value="" required />
@@ -37,13 +37,13 @@
                     <div>
                         <label for="content-{{ $id }}"
                             class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                            Konten</label>
+                            Content</label>
                         <input type="text" name="content" id="content-{{ $id }}" placeholder="Konten Note"
                             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-slate-500 focus:border-slate-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
                             value="" required />
                     </div>
                     <button type="submit"
-                        class="w-full text-white bg-slate-700 hover:bg-slate-800 focus:ring-4 focus:outline-none focus:ring-slate-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-slate-600 dark:hover:bg-slate-700 dark:focus:ring-slate-800">Submit</button>
+                        class="w-full text-white bg-slate-700 hover:bg-slate-800 focus:ring-4 focus:outline-none focus:ring-slate-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-slate-600 dark:hover:bg-slate-700 dark:focus:ring-slate-800">Save</button>
                 </form>
             </div>
         </div>
