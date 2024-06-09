@@ -27,17 +27,17 @@
                     </div>
                     @if (auth()->check())
                         <div class="w-full h-fit flex flex-row">
-                            <form action="{{ route('deleteNote', ['id' => $note->id]) }}" method="POST" class="">
+                            <form action="{{ route('delete_note', ['id' => $note->id]) }}" method="POST" class="">
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit"
-                                    class="bg-red-500 hover:bg-red-600 text-white font-bold px-2 py-2 rounded-md">Delete
+                                    class="bg-red-500 hover:bg-red-600 text-white font-bold px-2 py-2 rounded-md">Delete Note
                                 </button>
                             </form>
 
-                            <button type="button" data-modal-target="update-modal{{ $note->id }}"
+                            <button type="button" data-modal-target="update_note{{ $note->id }}"
                                 data-modal-toggle="update-modal{{ $note->id }}"
-                                class="bg-blue-500 hover:bg-blue-600 text-white font-bold px-2 py-2 rounded-md ml-2">Edit
+                                class="bg-blue-500 hover:bg-blue-600 text-white font-bold px-2 py-2 rounded-md ml-2">Edit Note
                             </button>
 
                             <x-update-modal :id="$note->id" />

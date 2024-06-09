@@ -6,7 +6,7 @@ use App\Models\Comment;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
-class CommentController extends Controller
+class comment_controller extends Controller
 {
     /**
      * Display a listing of the comments.
@@ -33,7 +33,7 @@ class CommentController extends Controller
         return response()->json($comment, 201);
     }
 
-    
+
     public function show($id)
     {
         $comment = Comment::findOrFail($id);

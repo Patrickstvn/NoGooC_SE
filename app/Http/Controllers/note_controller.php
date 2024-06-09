@@ -6,17 +6,17 @@ use App\Models\Note;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
-class NoteController extends Controller
+class note_controller extends Controller
 {
     /**
      * Display a listing of the notes.
      */
     public function index()
     {
-    
+
     $notes = Note::with('comments')->get();
-    
-    return view('dashboard', ['notes' => $notes]); 
+
+    return view('dashboard', ['notes' => $notes]);
     }
 
 
